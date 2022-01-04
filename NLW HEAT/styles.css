@@ -1,0 +1,104 @@
+/* style - Estilo da página
+         h1 está no papel de Seletor = Referência de todos os h1 dentro do HTML
+          Regra dentro do par de chaves significa = Propriedade e Valor */
+
+/* Cascating Stylesheet - Folha de estilo em Cascata ->  Cascata -> Ordem de aparição dos elementos no meu estilo*/
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+  /* H - Heal : Cor em si S - Saturation: Saturação da Cor L - Lightness: Luz dessa cor ou Brilho */
+  /* Dois traços significam variável */
+  /* Height - Altura da tela */
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*Webkit - Vai funcionar somente em navegadores Webkit*/
+}
+body {
+  /* display - Maneira de visualização dos elementos*/
+
+  display: grid;
+  /*place items - Itens centralizados ao meio*/
+  place-items: center;
+  /* Background - Cor de fundo */
+}
+
+main {
+  background: url(images/Mobile.svg);
+  /*background significa plano de fundo 
+     url - é uma função */
+  width: 375px;
+  /*Width singifica a largura*/
+  height: 812px;
+  /*height significa a altura*/
+}
+.container {
+  max-width: 250px;
+  /*Max-width - Largura máxima*/
+  margin-left: auto;
+  margin-right: auto;
+  /*margin - Significa espaços laterais, margens */
+  text-align: center;
+  /*Text Align = Alinhamento de texto*/
+  color: var(--gray);
+  /* O var chama uma variável já declarada anteriormene */
+}
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+  /*Relative - Se torna o limite para um absoluto*/
+}
+.avatar span {
+  position: absolute;
+  /*Absolute = Permite que crie níveis de empilhamento*/
+  top: -15px;
+  /* Descola para cima */
+  z-index: 1;
+  /* Aumenta o nível do objeto escolhido */
+}
+.avatar > img {
+  /*Sinal de menor é para selecionar os níveis das imagens no avatar*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+  /*Object fit para acertar a proporção correta, se adapte nas larguras e alturas. Cover = Cobrir */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  /*Color - Cor do texto */
+  text-decoration: none;
+  /*Decoração do texto*/
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+p {
+  margin-top: 2rem;
+}
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  /*Mexer em detalhes da lista - List-style*/
+  padding: 0;
+  /*Paddin - Preenchimento interno*/
+  display: flex;
+  /*Display flex faz uma caixa ficar do lado da outra*/
+  gap: 0.5rem;
+  /*Gap é um espaço entre eles */
+  justify-content: center;
+  /*Justificando conteúdo ao centro */
+  /*Flex direction muda o eixo de alimnhamento do display no modo flex */
+}
