@@ -29,12 +29,14 @@ body {
 }
 
 main {
-  background: url(images/Mobile.svg);
+  background: url(images/Mobile.svg) no-repeat center/cover;
   /*background significa plano de fundo 
      url - é uma função */
-  width: 375px;
-  /*Width singifica a largura*/
-  height: 812px;
+  width: 100vw;
+  /*Width singifica a largura */
+  height: 100vw;
+  min-height: 812px;
+
   /*height significa a altura*/
 }
 .container {
